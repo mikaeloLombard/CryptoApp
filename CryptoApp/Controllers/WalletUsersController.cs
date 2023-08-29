@@ -153,35 +153,7 @@ namespace CryptoApp.Controllers
         }
         
 
-        //public System.Diagnostics.Process CreateWalletChrome(string url)
-        //{
-
-
-        //    ProcessStartInfo processInfo = new ProcessStartInfo
-        //    {
-
-        //        FileName = (string)("https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn"),
-        //        UseShellExecute = true
-
-        //    };
-
-        //    return Process.Start(processInfo);
-
-        //}
-
-        //public IActionResult CreateWalletEdge(string url)
-        //{
-        //    ProcessStartInfo processInfo = new ProcessStartInfo
-        //    {
-
-        //        FileName = (string)("https://microsoftedge.microsoft.com/addons/detail/metamask/ejbalbakoplchlghecdalmeeeajnimhm?hl=en-US"),
-
-        //        UseShellExecute = true
-        //    };
-        //    return (IActionResult)Process.Start(processInfo);
-
-        //}
-
+        
     }
 }
 
