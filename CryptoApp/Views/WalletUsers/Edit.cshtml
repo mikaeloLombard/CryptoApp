@@ -1,0 +1,52 @@
+﻿@model CryptoApp.Models.WalletUsers
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>WalletUsers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger">ID</div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PublicAdress" class="control-label">Wallet P.A.</label>
+                <input asp-for="PublicAdress" class="form-control" />
+                <span asp-validation-for="PublicAdress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberTransactions" class="control-label">Number of Trasactions</label>
+                <input asp-for="NumberTransactions" class="form-control" />
+                <span asp-validation-for="NumberTransactions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuiltDate" class="control-label"></label>
+                <input asp-for="BuiltDate" class="form-control" />
+                <span asp-validation-for="BuiltDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ActiveInactive" /> Status Active/Inactive
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<br />

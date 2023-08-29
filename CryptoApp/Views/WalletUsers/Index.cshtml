@@ -1,0 +1,84 @@
+﻿@model IEnumerable<CryptoApp.Models.WalletUsers>
+
+
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-success">Wallet and Users</h2>
+        </div>
+        <div class="col-6 text-lg-right">
+            <a asp-controller="WalletUsers" asp-action="Create" class="btn btn-outline-primary">
+                + Add new Users
+            </a>
+        </div>
+    </div>
+    
+
+    <br /><br /><br />
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thread>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Wallet P.A.
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+
+                </tr>
+            </thread>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    <tr>
+                        <td width="10%">@obj.Id</td>
+                        <td width="15%">@obj.Name</td>
+                        <td width="25%">@obj.PublicAdress</td>
+
+                        <td class="text-left">
+                            <div class="w-75 btn-group" role="group">
+
+
+
+                                <a asp-controller="WalletUsers" asp-route-Id="@obj.Id" asp-action="Edit" type="button" class="btn btn-primary">
+                                    Edit
+                                </a>
+
+                                <a asp-controller="WalletUsers" asp-route-Id="@obj.Id" asp-action="Details" type="button" class="btn btn-success">
+                                    View
+                                </a>
+
+                                <a asp-controller="WalletUsers" asp-route-Id="@obj.Id" asp-action="Delete" type="button" class="btn btn-danger">
+                                    Delete
+                                </a>
+
+
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+
+
+        </table>
+    }
+
+
+
+
+</div>

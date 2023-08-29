@@ -1,0 +1,64 @@
+﻿@model CryptoApp.Models.WalletUsers
+
+<div class="">
+    <form method="post" asp-action="Details">
+
+        <div class="container backgroundWhite pt-4">
+            <div class="card" style="border:1px solid #000000; ">
+                <div class="card-header bg-dark text-light ml-0 row container" style="border-radius: 0px;">
+                    <div class="col-12 col-md-6">
+                        <h1 class="text-white">@Model.Name</h1>
+                    </div>
+                    <div class="col-12 col-md-6 text-md-right">
+                        <h1 class="text-warning">ETH Network</h1>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="container rounded p-2">
+                        <div class="row">
+                            <div class="col-12 col-lg-4 p-1 text-left">
+                                <img src="" width="100%" class="rounded" />
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <div class="row pl-3">
+
+                                    <div class="col-12">
+                                        <span class="badge p-3 border" style="background-color:lavenderblush">@Model.PublicAdress</span>
+                                        <span class="badge p-3 border" style="background-color:azure">@Model.ActiveInactive</span>
+                                        <h3 class="text-success"> </h3>
+                                        <span class="badge p-3 border" style="background-color:slategrey">Transactions to Date: @Model.NumberTransactions</span>
+                                        <span class="badge p-3 border" style="background-color:lavenderblush">ETH: @ViewData["MainBalance"]</span>
+                                        
+                                        <h3 class="text-success"> </h3>
+                                        <span class="badge p-3 border" style="background-color:lavenderblush">Last Block Number: @ViewData["countTrans"]</span>
+                                        <h3 class="text-success"> </h3>
+
+                                        <p class="text-secondary">Created: @Model.BuiltDate</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-dark">
+                    <div class="row">
+                        <div class="col-12 col-md-6 pb-1 ">
+                            <a asp-action="Index" class="btn btn-success btn-square form-control btn-lg" style="height:50px;">Back to List</a>
+                        </div>
+                        <div class="col-12 col-md-6 text-md-right">
+                            <a href="@ViewData["Padress"]" target="_blank" class="btn btn-success">See in Etherscan</a>
+                            
+                        </div>
+                        @*<div class="col-12 col-md-6 ">
+
+            <button type="submit" class="btn btn-info form-control btn-lg" style="height:50px;">Add to Cart</button>
+
+        </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<br />
